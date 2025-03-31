@@ -53,7 +53,7 @@ export const GlobalProvider = ({children}) => {
     }
 
     const getExpenses = async () => {
-        const response = await axios.get(`${BASE_URL}get-expenses`)
+        const response = await axios.get(`${BASE_URL}get-expense`)
         setExpenses(response.data)
         console.log(response.data)
     }
