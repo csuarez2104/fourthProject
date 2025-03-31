@@ -19,15 +19,15 @@ const incomeSchema = new mongoose.Schema({
         default: Date.now,
         required: true
     },
+    category: {
+        type: String,
+        enum: ['salary', 'freelancing', 'investments', 'bitcoin', 'bank', 'youtube', 'other', 'stocks'], // Add 'stocks'
+        required: true,
+    },
     description: {
         type: String,
         trim: true,
         maxLength: 200
-    },
-    category: {
-        type: String,
-        enum: ['Salary', 'Business', 'Investment', 'Other'],
-        default: 'Other'
     }
 }, {
     timestamps: true
